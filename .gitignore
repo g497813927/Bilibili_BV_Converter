@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Specific Files
+.DS_Store
+
+# Workspace
+.idea
