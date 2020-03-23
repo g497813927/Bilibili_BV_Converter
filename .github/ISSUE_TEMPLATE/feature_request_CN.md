@@ -1,9 +1,9 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
+名称：特性建议
+关于：建议一个对于这个项目的想法
+标题： ''
+标签： ''
+分配的人： ''
 
 
 ---

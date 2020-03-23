@@ -1,9 +1,9 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+名称： Bug上报
+关于： 创造一个报告，以便我们能够提升
+标题： ''
+标签： ''
+分配的人： ''
 
 
 ---
