@@ -40,7 +40,9 @@ python main.py
 
 稍等片刻，即可获得其对应的AV号
 
+### iOS & iPadOS设备兼容方案
 
+对于iOS或者iPadOS用户，可以通过“捷径”做到相同效果，请在Safari中直接点击[这里](https://www.icloud.com/shortcuts/7390c4cce8da46c69ca0c67f2874c815)，导入后即可快速使用
 
 ### FAQ
 
