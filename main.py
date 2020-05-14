@@ -16,16 +16,65 @@ headers = {
 }
 
 
+chs = [
+    '请输入BV号：',
+    '输入错误！BV号应由\'BV\'开头！',
+    '查询出错了！\n可能的原因：\n\t该视频可能并不存在AV号',
+    '查询出错了！\n可能的原因：\n\t1、你调用的次数太多暂时冻结了，要过一会儿才可以继续查询！\n\t2、你的网络可能出现了一些异常',
+    '抱歉，请重试！',
+    '对应的AV号为：AV'
+]
+
+eng = [
+    'Please input BV number:',
+    'Input Error! BV number should start with \'BV\'!',
+    'Query Error!\nPossible Reason:\n\tThis video might not have an AV number',
+    'Query Error!\nPossible Reasons:\n\t1. You use this too much in short period, please query later!' +
+    '\n\t2.You might encountered with some internet issues',
+    'Sorry, please try again!',
+    'The AV number for the video you input is: AV'
+]
+
+
 # Function when it is short link
 def get_url(link):
     response = requests.get(link, headers=headers)
     return response.url
 
-
 try:
     sys.argv[1]
 except IndexError:
-    BV_Number = input('请输入BV号：')
+    while True:
+        print('1. 简体中文\n2. English')
+        language_selection = input('请选择语言(Select language):')
+        if language_selection == '1' or language_selection.lower() == 'chs' or language_selection == '简体中文' \
+                or language_selection == '中文' or language_selection.lower() == 'cn' \
+                or language_selection.lower() == 'china' or language_selection.lower() == 'chinese':
+            lang = chs
+            break
+        elif language_selection == '2' or language_selection.lower() == 'eng' \
+                or language_selection.lower() == 'english':
+            lang = eng
+            break
+        else:
+            print('输入错误，请重试(Unknown Selection, please try again)')
+else:
+    while True:
+        language_selection = sys.argv[1]
+        if language_selection == '1':
+            lang = chs
+            break
+        elif language_selection == '2':
+            lang = eng
+            break
+        else:
+            print('输入错误，请重试(Unknown Selection, please try again)')
+            print('1. 简体中文\n2. English')
+            language_selection = input('请选择语言(Select language):')
+try:
+    sys.argv[2]
+except IndexError:
+    BV_Number = input(lang[0])
     while True:
         if BV_Number.lower().find('bilibili.com') > 0 \
                 or BV_Number.lower().find('b23.tv') > 0:
@@ -33,16 +82,16 @@ except IndexError:
                 BV_Number = get_url(BV_Number)
                 break
             else:
-                print('输入错误！BV号应由BV开头！')
-                BV_Number = input('请输入BV号：')
+                print(lang[1])
+                BV_Number = input(lang[0])
         else:
             if BV_Number.upper().find('BV') == 0:
                 break
             else:
-                print('输入错误！BV号应由BV开头！')
-                BV_Number = input('请输入BV号：')
+                print(lang[1])
+                BV_Number = input(lang[0])
 else:
-    BV_Number = sys.argv[1]
+    BV_Number = sys.argv[2]
     while True:
         if BV_Number.lower().find('bilibili.com') > 0 \
                 or BV_Number.lower().find('b23.tv') > 0:
@@ -51,14 +100,14 @@ else:
                 BV_Number = get_url(BV_Number)
                 break
             else:
-                print('输入错误！BV号应由BV开头！')
-                BV_Number = input('请输入BV号：')
+                print(lang[1])
+                BV_Number = input(lang[0])
         else:
             if BV_Number.upper().find('BV') == 0:
                 break
             else:
-                print('输入错误！BV号应由BV开头！')
-                BV_Number = input('请输入BV号：')
+                print(lang[1])
+                BV_Number = input(lang[0])
 
 if BV_Number.find('?') != -1:
     BV_Number = BV_Number[BV_Number.find('BV'):BV_Number.find('?')]
@@ -73,12 +122,12 @@ if r.status_code == 200:
         j = r.json()['data']
         AV_Number = j['aid']
     except Exception:
-        print('查询出错了！\n可能的原因：\n\t该视频可能并不存在AV号')
+        print(lang[2])
 else:
-    print('查询出错了！\n可能的原因：\n\t1、你调用的次数太多暂时冻结了，要过一会儿才可以继续查询！\n\t2、你的网络可能出现了一些异常')
+    print(lang[3])
 try:
     AV_Number
 except Exception:
-    print('抱歉，请重试！')
+    print(lang[4])
 else:
-    print('对应的AV号为：AV' + str(AV_Number))
+    print(lang[5] + str(AV_Number))

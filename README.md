@@ -4,6 +4,8 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
+[English Version](/README_ENG.md)
+
 ### 免责声明
 
 **此项目仅作学习参考，请勿将此项目用于任何的违法行为！由于自己的不当行为使用此项目而导致的一切法律风险，此项目概不负责！**
@@ -19,8 +21,10 @@ Bilibili（B站）BV号转AV号转换器，用户只需输入BV号即可快速�
 在命令行或终端中直接输入以下内容
 
 ```bash
-python main.py <BV号>
+python main.py <语言选择> <BV号>
 ```
+
+将此处的\<语言选择\>更改为你所需要的语言，需要输入对应数字（1-`简体中文` 2- `英语`）
 
 将此处的\<BV号\>更换为视频的BV号，按下回车，即可返回对应AV号
 
@@ -32,7 +36,15 @@ python main.py <BV号>
 python main.py
 ```
 
-然后根据提示，输入BV号
+根据提示，选择语言
+
+```bash
+1. 简体中文
+2. English
+请选择语言(Select language):
+```
+
+然后根据提示，输入BV号（此处以中文举例）
 
 ```bash
 请输入BV号：
