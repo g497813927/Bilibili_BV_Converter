@@ -1,48 +1,6 @@
 import requests
 import sys
 
-try:
-    sys.argv[1]
-except IndexError:
-    BV_Number = input('请输入BV号：')
-    while True:
-        if 0 <= BV_Number.lower().find('bilibili.com') < len(BV_Number)-12 \
-                or 0 <= BV_Number.lower().find('b23.tv') < len(BV_Number)-6:
-            if BV_Number.upper().find('BV') < len(BV_Number)-2:
-                break
-            else:
-                print('输入错误！BV号应由BV开头！')
-                BV_Number = input('请输入BV号：')
-        else:
-            if BV_Number.upper().find('BV') == 0:
-                break
-            else:
-                print('输入错误！BV号应由BV开头！')
-                BV_Number = input('请输入BV号：')
-    else:
-        BV_Number = sys.argv[1]
-        while True:
-            if 0 <= BV_Number.lower().find('bilibili.com') < len(BV_Number) - 12 \
-                    or 0 <= BV_Number.lower().find('b23.tv') < len(BV_Number) - 6:
-                if BV_Number.upper().find('BV') < len(BV_Number)-2:
-                    break
-                else:
-                    print('输入错误！BV号应由BV开头！')
-                    BV_Number = input('请输入BV号：')
-            else:
-                if BV_Number.upper().find('BV') == 0:
-                    break
-                else:
-                    print('输入错误！BV号应由BV开头！')
-                    BV_Number = input('请输入BV号：')
-
-
-if BV_Number.find('?') != -1:
-    BV_Number = BV_Number[BV_Number.find('BV'):BV_Number.find('?')]
-else:
-    BV_Number = BV_Number[BV_Number.find('BV'):]
-
-url = 'https://api.bilibili.com/x/web-interface/archive/stat?bvid={}'
 headers = {
     'Connection': 'keep-alive',
     'Cache-Control': 'max-age=0',
@@ -56,8 +14,61 @@ headers = {
     'Sec-Fetch-Dest': 'document',
     'Accept-Language': 'en-US,en;q=0.9'
 }
+
+
+# Function when it is short link
+def get_url(link):
+    response = requests.get(link, headers=headers)
+    return response.url
+
+
+try:
+    sys.argv[1]
+except IndexError:
+    BV_Number = input('请输入BV号：')
+    while True:
+        if BV_Number.lower().find('bilibili.com') > 0 \
+                or BV_Number.lower().find('b23.tv') > 0:
+            if get_url(BV_Number).upper().find('BV') < len(get_url(BV_Number)) - 2:
+                BV_Number = get_url(BV_Number)
+                break
+            else:
+                print('输入错误！BV号应由BV开头！')
+                BV_Number = input('请输入BV号：')
+        else:
+            if BV_Number.upper().find('BV') == 0:
+                break
+            else:
+                print('输入错误！BV号应由BV开头！')
+                BV_Number = input('请输入BV号：')
+else:
+    BV_Number = sys.argv[1]
+    while True:
+        if BV_Number.lower().find('bilibili.com') > 0 \
+                or BV_Number.lower().find('b23.tv') > 0:
+
+            if get_url(BV_Number).upper().find('BV') < len(get_url(BV_Number)) - 2:
+                BV_Number = get_url(BV_Number)
+                break
+            else:
+                print('输入错误！BV号应由BV开头！')
+                BV_Number = input('请输入BV号：')
+        else:
+            if BV_Number.upper().find('BV') == 0:
+                break
+            else:
+                print('输入错误！BV号应由BV开头！')
+                BV_Number = input('请输入BV号：')
+
+if BV_Number.find('?') != -1:
+    BV_Number = BV_Number[BV_Number.find('BV'):BV_Number.find('?')]
+else:
+    BV_Number = BV_Number[BV_Number.find('BV'):]
+
+url = 'https://api.bilibili.com/x/web-interface/archive/stat?bvid={}'
+
 r = requests.get(url.format(BV_Number), headers=headers)
-if r.status_code ==200:
+if r.status_code == 200:
     try:
         j = r.json()['data']
         AV_Number = j['aid']
@@ -70,4 +81,4 @@ try:
 except Exception:
     print('抱歉，请重试！')
 else:
-    print('对应的AV号为：AV'+str(AV_Number))
+    print('对应的AV号为：AV' + str(AV_Number))

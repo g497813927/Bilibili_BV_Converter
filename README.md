@@ -42,7 +42,7 @@ python main.py
 
 ### iOS & iPadOS设备兼容方案
 
-对于iOS或者iPadOS用户，可以通过“捷径”做到相同效果，请在Safari中直接点击[这里](https://www.icloud.com/shortcuts/7390c4cce8da46c69ca0c67f2874c815)，导入后即可快速使用
+对于iOS或者iPadOS用户，可以通过“捷径”做到相同效果，请在Safari中直接点击[这里](https://www.icloud.com/shortcuts/75df12ce50e54e62a3bd33b5aefa7218)，导入后即可快速使用
 
 ### FAQ
 
