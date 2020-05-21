@@ -21,14 +21,12 @@ Bilibili（B站）BV号转AV号转换器，用户只需输入BV号即可快速�
 在命令行或终端中直接输入以下内容
 
 ```bash
-python main.py <语言选择> <BV号>
+python main.py <BV号>
 ```
 
-将此处的\<语言选择\>更改为你所需要的语言，需要输入对应数字（1-`简体中文` 2- `英语`）
+将此处的\<BV号\>更换为视频的BV号，按下回车，即可返回对应AV号（显示语言为系统语言，仅支持简体中文和英文）
 
-将此处的\<BV号\>更换为视频的BV号，按下回车，即可返回对应AV号
-
-2、不带参数（或者参数输入有误）
+2、不带参数
 
 在命令行或终端内输入以下内容
 
@@ -36,7 +34,15 @@ python main.py <语言选择> <BV号>
 python main.py
 ```
 
-根据提示，选择语言
+根据提示，选择是否使用系统默认语言运行（目前仅支持简体中文和英文）
+
+```bash
+你当前的系统语言是简体中文，需要更改程序显示语言吗？
+Your current language display is Chinese Simplified, do you want to switch language?
+(Y/N)
+```
+
+选择语言
 
 ```bash
 1. 简体中文
