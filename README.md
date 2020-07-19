@@ -21,7 +21,7 @@ Bilibili（B站）BV号转AV号转换器，用户只需输入BV号即可快速�
 在命令行或终端中直接输入以下内容
 
 ```bash
-python main.py <BV号>
+python3 main.py <BV号>
 ```
 
 将此处的\<BV号\>更换为视频的BV号，按下回车，即可返回对应AV号（显示语言为系统语言，仅支持简体中文和英文）
@@ -31,7 +31,7 @@ python main.py <BV号>
 在命令行或终端内输入以下内容
 
 ```bash
-python main.py
+python3 main.py
 ```
 
 根据提示，选择是否使用系统默认语言运行（目前仅支持简体中文和英文）

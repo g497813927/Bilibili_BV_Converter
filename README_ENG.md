@@ -21,7 +21,7 @@ Bilibili(a famous video website in China) Converter for BV number to AV number. 
 Input following line in your terminal(Linux & macOS) or Command Prompt(Windows)
 
 ```bash
-python main.py <BV number>
+python3 main.py <BV number>
 ```
 
 Change \<BV number\> into the BV number of the video
@@ -33,7 +33,7 @@ Press enter, you will get the AV number of that video in your system's default l
 Input following line in your terminal(Linux & macOS) or Command Prompt(Windows)
 
 ```bash
-python main.py
+python3 main.py
 ```
 Choose whether or not use system's default language(Currently only support `Chinese Simplified` and `English`) to run this program
 ```
