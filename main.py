@@ -132,9 +132,9 @@ else:
                 BV_Number = input(lang[0])
 
 if BV_Number.find('?') != -1:
-    BV_Number = BV_Number[BV_Number.find('BV'):BV_Number.find('?')]
+    BV_Number = "BV" + BV_Number[BV_Number.find('BV')+3:BV_Number.find('?')]
 else:
-    BV_Number = BV_Number[BV_Number.find('BV'):]
+    BV_Number = "BV" + BV_Number[BV_Number.find('BV')+3:]
 
 url = 'https://api.bilibili.com/x/web-interface/archive/stat?bvid={}'
 
