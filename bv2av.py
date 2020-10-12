@@ -46,7 +46,8 @@ def get_url(link):
 language = locale.getdefaultlocale()[0]
 
 try:
-    sys.argv[1]
+    temp = sys.argv[1]
+    int(sys.argv[2])
 except IndexError:
     if language == 'zh_CN':
         print('你当前的系统语言是简体中文，需要更改程序显示语言吗？')
@@ -94,7 +95,8 @@ else:
         lang = eng
 
 try:
-    sys.argv[1]
+    temp = sys.argv[1]
+    int(sys.argv[2])
 except IndexError:
     BV_Number = input(lang[0])
     while True:
@@ -132,9 +134,9 @@ else:
                 BV_Number = input(lang[0])
 
 if BV_Number.find('?') != -1:
-    BV_Number = "BV" + BV_Number[BV_Number.find('BV')+3:BV_Number.find('?')]
+    BV_Number = "BV" + BV_Number[BV_Number.upper().find('BV')+2:BV_Number.find('?')]
 else:
-    BV_Number = "BV" + BV_Number[BV_Number.find('BV')+3:]
+    BV_Number = "BV" + BV_Number[BV_Number.upper().find('BV')+2:]
 
 url = 'https://api.bilibili.com/x/web-interface/archive/stat?bvid={}'
 
