@@ -36,8 +36,8 @@ eng = [
     '\n\t2.You might encountered with some internet issues\n\t3.The video does not exist',
     'Sorry, please try again!',
     'The CID number for the video you input is: ',
-    'Please input the part of the video you want to\n(Number only, 0 stands for the first part, ' +
-    '1 stands for the second part, and so on.)\n',
+    'Please input the index of the part of the video you want to\n(Number only, 0 stands for the first part, ' +
+    '1 stands for the second part, and so on):\n',
     'Input error! The part number should be a whole number!'
 ]
 
