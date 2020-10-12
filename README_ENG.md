@@ -5,7 +5,7 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
-[中文版](/README.md)
+[中文版](https://github.com/g497813927/Bilibili_BV_Converter)
 
 ### Disclaimer
 
@@ -13,7 +13,7 @@
 
 ### TL;DR
 
-Bilibili(a famous video website in China) Converter for BV number. Users only need to run the program to obtain the data they want.
+Bilibili(a famous video website in China) Converter for BV number. Users only need to run the specific program to obtain the data they want.
 
 ### BV2CID
 
@@ -31,7 +31,7 @@ python3 bv2cid.py <BV number> <p number>
 
 Change \<BV number\> into the BV number of the video, and \<p number\> into the index of the part of the video
 
-Press enter, you will get the CID of the part of the video you queried in your system's default language(Currently only support `Chinese Simplified` and `English`)
+Press enter, you will get the CID of the part of the video you queried in your system's default language(Currently support `Chinese Simplified` and `English` only)
 
 2. Without Parameters
 
@@ -57,7 +57,7 @@ Select the language you want
 请选择语言(Select language):
 ```
 
-Then input BV number(use English as an example)
+Then input BV number(use `English` as an example)
 
 ```bash
 Please input BV number:
@@ -112,7 +112,7 @@ Select the language you want
 请选择语言(Select language):
 ```
 
-Then input BV number(use English as an example)
+Then input BV number(use `English` as an example)
 
 ```bash
 Please input BV number:

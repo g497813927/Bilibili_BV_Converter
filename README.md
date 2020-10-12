@@ -29,7 +29,7 @@ Bilibili（B站）BV号转换器，用户只需运行对应的文件，即可快
 python3 bv2cid.py <BV号> <p数>
 ```
 
-将此处的\<BV号\>更换为视频的BV号，<p数>更换为视频所需获取的对应p数（第一p为0，第二p为1，以此类推，目前一次只能查询一个p的cid号）。按下回车，即可返回对应CID号（显示语言为系统语言，仅支持简体中文和英文）
+将此处的\<BV号\>更换为视频的BV号，<p数>更换为视频所需获取的对应p数（第一p为0，第二p为1，以此类推，目前一次只能查询一个p的cid号）。按下回车，即可返回对应CID号（显示语言为系统语言，仅支持`简体中文`和`英文`）
 
 2、不带参数
 
@@ -55,7 +55,7 @@ Your current language display is Chinese Simplified, do you want to switch langu
 请选择语言(Select language):
 ```
 
-然后根据提示，输入BV号（此处以中文举例）
+然后根据提示，输入BV号（此处以`简体中文`举例）
 
 ```bash
 请输入BV号：
@@ -84,7 +84,7 @@ Your current language display is Chinese Simplified, do you want to switch langu
 python3 bv2av.py <BV号>
 ```
 
-将此处的\<BV号\>更换为视频的BV号，按下回车，即可返回对应AV号（显示语言为系统语言，仅支持简体中文和英文）
+将此处的\<BV号\>更换为视频的BV号，按下回车，即可返回对应AV号（显示语言为系统语言，仅支持`简体中文`和`英文`）
 
 2、不带参数
 
@@ -110,7 +110,7 @@ Your current language display is Chinese Simplified, do you want to switch langu
 请选择语言(Select language):
 ```
 
-然后根据提示，输入BV号（此处以中文举例）
+然后根据提示，输入BV号（此处以`简体中文`举例）
 
 ```bash
 请输入BV号：
