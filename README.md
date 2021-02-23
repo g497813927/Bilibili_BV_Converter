@@ -4,6 +4,7 @@
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fg497813927%2FBilibili_BV_Converter.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fg497813927%2FBilibili_BV_Converter?ref=badge_shield)
 
 [English Version](/README_ENG.md)
 
@@ -168,3 +169,7 @@ Your current language display is Chinese Simplified, do you want to switch langu
 
 如果你发现了bug，欢迎在这里提交Pull Request或者Issues，或者联系[admin@vip.techzjc.com](mailto:admin@vip.techzjc.com)。对于每一条回应，都将会尽快回复！
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fg497813927%2FBilibili_BV_Converter.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fg497813927%2FBilibili_BV_Converter?ref=badge_large)
